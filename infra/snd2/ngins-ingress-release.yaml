@@ -2,19 +2,21 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: nginx-ingress
-  namespace: infra-config
+  name: redis
+  namespace: cluster-config
 spec:
   chart:
     spec:
-      chart: nginx-ingress
+      chart: redis
       reconcileStrategy: ChartVersion
       sourceRef:
         kind: HelmRepository
-        name: nginx-ingress
-      version: 0.18.1
+        name: redis
   install:
+    timeout: 20m
     createNamespace: true
+    remediation:
+      retries: 3
   interval: 1m0s
-  releaseName: nginx-ingress
-  targetNamespace: nginx-ingress
+  releaseName: redis
+  targetNamespace: redis
