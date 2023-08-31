@@ -2,8 +2,9 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
-  name: redis
+  name: nginx-ingress
   namespace: infra-config
 spec:
   interval: 10m0s
-  url: https://charts.bitnami.com/bitnami
+  type: oci
+  url: oci://ghcr.io/nginxinc/charts/nginx-ingress
