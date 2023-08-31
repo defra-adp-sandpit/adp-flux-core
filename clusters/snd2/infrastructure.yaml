@@ -5,12 +5,12 @@ metadata:
   name: core-services
   namespace: flux-system
 spec:
-  interval: 5m
+  interval: 15m
   retryInterval: 1m
   timeout: 5m
   sourceRef:
     kind: GitRepository
-    name: flux-system
+    name: flux-core
   path: ./services/snd2/01
   prune: true
   wait: true
