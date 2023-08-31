@@ -1,0 +1,10 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: nginx-ingress
+  namespace: infra-config
+spec:
+  interval: 10m0s
+  type: oci
+  url: oci://ghcr.io/nginxinc/charts/nginx-ingress
