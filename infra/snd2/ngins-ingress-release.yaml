@@ -21,9 +21,9 @@ spec:
   values:
     controller:
       service:
-        create: "true"
+        create: true
         type: LoadBalancer
         annotations:
-          service.beta.kubernetes.io/azure-load-balancer-internal: "true"
-          service.beta.kubernetes.io/azure-pls-create: "true"
+          service.beta.kubernetes.io/azure-load-balancer-internal: true
+          service.beta.kubernetes.io/azure-pls-create: true
         
