@@ -18,10 +18,3 @@ spec:
   interval: 1m0s
   releaseName: nginx-ingress
   targetNamespace: nginx-ingress
-  values:
-    controller:
-      service:
-        annotations:
-          service.beta.kubernetes.io/azure-load-balancer-internal: "true"
-          service.beta.kubernetes.io/azure-pls-create: "true"
-        type: LoadBalancer
