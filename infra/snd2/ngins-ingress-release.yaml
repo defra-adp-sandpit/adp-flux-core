@@ -14,10 +14,14 @@ spec:
         name: nginx-ingress
       version: 0.18.1
   install:
-    timeout: 20m
     createNamespace: true
-    remediation:
-      retries: 3
   interval: 1m0s
   releaseName: nginx-ingress
   targetNamespace: nginx-ingress
+  values:
+    controller:
+      service:
+        annotations:
+          service.beta.kubernetes.io/azure-load-balancer-internal: "true"
+          service.beta.kubernetes.io/azure-pls-create: "true"
+        type: LoadBalancer
