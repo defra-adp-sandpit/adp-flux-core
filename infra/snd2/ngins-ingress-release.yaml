@@ -25,7 +25,8 @@ spec:
     controller:
       nginxplus: true
       image:
-        repository: "ssvcdoinfcr3401.azurecr.io/image/nginx-plus-ingress:3.2.0"
+        repository: "ssvcdoinfcr3401.azurecr.io/image/nginx-plus-ingress"
+        tag: 3.2.0
       service:
         create: true
         type: LoadBalancer
@@ -34,4 +35,3 @@ spec:
           service.beta.kubernetes.io/azure-pls-create: "true"
       nodeSelector:
         kubernetes.io/os: "linux"
-        
