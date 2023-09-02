@@ -23,6 +23,9 @@ spec:
       nodeSelector:
         kubernetes.io/os: "linux"
     controller:
+      nginxplus: true
+      image:
+        repository: "ssvcdoinfcr3401.azurecr.io/image/nginx-plus-ingress:3.2.0"
       service:
         create: true
         type: LoadBalancer
