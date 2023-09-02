@@ -19,6 +19,9 @@ spec:
   releaseName: nginx-ingress
   targetNamespace: nginx-ingress
   values:
+    defaultBackend:
+      nodeSelector:
+        kubernetes.io/os: "linux"
     controller:
       service:
         create: true
@@ -26,4 +29,6 @@ spec:
         annotations:
           service.beta.kubernetes.io/azure-load-balancer-internal: "true"
           service.beta.kubernetes.io/azure-pls-create: "true"
+      nodeSelector:
+        kubernetes.io/os: "linux"
         
