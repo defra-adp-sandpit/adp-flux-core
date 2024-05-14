@@ -1,0 +1,12 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: services-repository
+  namespace: flux-config
+spec:
+  interval: 5m
+  ref:
+    branch: main
+  url: ssh://git@github.com/DEFRA/adp-flux-services/
+  secretRef:
+    name: adp-platform-secrets
