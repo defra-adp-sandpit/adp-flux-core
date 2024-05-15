@@ -15,7 +15,7 @@ patches:
     target:
       kind: HelmRelease
       name: release-calico-network-policies
-  - path: notification-values.yaml
-    target:
-      kind: Ingress
-      name: webhook-receiver
+  # - path: notification-values.yaml
+  #   target:
+  #     kind: Ingress
+  #     name: webhook-receiver

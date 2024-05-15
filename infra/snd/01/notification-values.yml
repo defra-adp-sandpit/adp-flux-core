@@ -2,7 +2,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: Ingress
 metadata:
   name: webhook-receiver
-  namespace: flux-config
+  namespace: flux-system
 spec:
   rules:
     host: flux-webhook.snd1.adp.defra.gov.uk
