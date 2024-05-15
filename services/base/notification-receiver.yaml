@@ -2,7 +2,7 @@ apiVersion: notification.toolkit.fluxcd.io/v1
 kind: Receiver
 metadata:
   name: services-repository
-  namespace: flux-config
+  namespace: flux-system
 spec:
   type: github
   events:
@@ -13,3 +13,4 @@ spec:
   resources:
     - kind: GitRepository
       name: services-repository
+      namespace: flux-config
