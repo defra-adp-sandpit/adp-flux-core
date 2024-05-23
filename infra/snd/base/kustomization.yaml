@@ -8,4 +8,5 @@ resources:
   - ../../../core/app-config-service
   - ../../../core/reloader
   - ../../../core/grafana
+  - ../../../core/notification
   - priority-class.yaml
