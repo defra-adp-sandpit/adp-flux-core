@@ -6,7 +6,7 @@ metadata:
 spec:
   interval: 2m30s
   ref:
-    branch: pp/kustomization
+    branch: main
   url: ssh://git@github.com/defra-adp-sandpit/adp-flux-services/
   secretRef:
     name: adp-platform-secrets
