@@ -4,7 +4,7 @@ metadata:
   name: services-repository
   namespace: flux-config
 spec:
-  interval: 1m0s
+  interval: 3m0s
   ref:
     branch: pp/kustomization
   ignore: |
