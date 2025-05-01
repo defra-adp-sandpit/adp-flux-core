@@ -16,7 +16,15 @@ spec:
           service.beta.kubernetes.io/azure-load-balancer-internal-subnet: "${LOAD_BALANCER_SUBNET}"
       image:
         repository: "${SHARED_CONTAINER_REGISTRY}.azurecr.io/image/ingress-nginx"
+        digest: "sha256:cc3ae8414f1e297e7fc6bba9ce1363b700793062e676bf6b2400779c76455419"
         tag: 1.12.1
       replicaCount: 3
       podDisruptionBudget:
         minAvailable: 2
+      admissionWebhooks:
+        patch:
+          enabled: true
+          image:
+            repository: "${SHARED_CONTAINER_REGISTRY}.azurecr.io/image/kube-webhook-certgen"
+            digest: "sha256:d606370062dbf92e8f6ac41938c66f19dfc39a88559217d097f21263fd7086d3"
+            tag: v1.5.3
